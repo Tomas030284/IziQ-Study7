@@ -53,7 +53,7 @@ export async function getStaticProps() {
 
 async function getTopSixDecks() {
   const response = await axios
-    .get(`${process.env.NEXT_PUBLIC_HOST}/api/decks`)
+    .get("https://izi-q-study7.vercel.app/api/decks")
     .then((res) => res.data)
     .then((data) =>
       data.sort((a, b) => Utils.sortDescCompareFn(a.rating, b.rating))
