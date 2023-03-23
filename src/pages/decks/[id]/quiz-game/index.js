@@ -74,7 +74,7 @@ export async function getServerSideProps(context) {
 
 async function getCardsByDeckId(deck_id) {
   const response = await axios
-    .get(`${process.env.NEXT_PUBLIC_HOST}/api/cards/deck-id/${deck_id}`)
+    .get("https://izi-q-study7.vercel.app/api/cards/deck-id/${deck_id}")
     .then((res) => res.data);
 
   return response;
