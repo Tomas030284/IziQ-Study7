@@ -26,7 +26,7 @@ function Decks() {
     error: deck_error,
   } = ReactQuery.useQuery([QK_DECK], async () => {
     const response = await axios
-      .get(`${process.env.NEXT_PUBLIC_HOST}/api/cards/deck-id/${deck_id}`)
+      .get(`https://izi-q-study7.vercel.app/api/cards/deck-id/${deck_id}`)
       .then((res) => res.data);
 
     return response;
@@ -51,7 +51,7 @@ function Decks() {
 
   const mutationPost = ReactQuery.useMutation(
     (cardData) => {
-      return axios.post(`${process.env.NEXT_PUBLIC_HOST}/api/cards`, cardData);
+      return axios.post("https://izi-q-study7.vercel.app/api/cards", cardData);
     },
     {
       onSuccess: () => {
