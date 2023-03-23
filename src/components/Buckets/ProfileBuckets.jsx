@@ -24,7 +24,7 @@ const ProfileBuckets = () => {
 
     if (data) {
       console.log("este es data ", data);
-      await axios.put(`${process.env.NEXT_PUBLIC_HOST}/api/users`, {
+      await axios.put("https://izi-q-study7.vercel.app/api/users", {
         users_uuid: userID,
         image: data.path,
       });
